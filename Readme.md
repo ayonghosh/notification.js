@@ -8,8 +8,8 @@ Include the notification.js script and the notification.css stylesheet in your p
 
 The following event handlers are supported:
 
-`onclick` - Triggered when a notification is clicked
-`onshow`  - Triggered when a notification is displayed
-`onclose` - Triggered when a notification is closed by the user
+* `onclick` - Triggered when a notification is clicked
+* `onshow`  - Triggered when a notification is displayed
+* `onclose` - Triggered when a notification is closed by the user
 
 Check out working demo here: http://intellisol.herokuapp.com/notificationdemo.html
