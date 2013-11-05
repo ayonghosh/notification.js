@@ -1,0 +1,53 @@
+
+
+.notification {
+	width: 360px;
+	height: 80px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	box-shadow: 0px 2px 4px #888888;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	border: 1px solid rgb(241,241,241);
+}
+
+.notification .icon {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	float: left;
+	background-color: rgb(245,245,245);
+}
+
+.notification .note {
+	display: inline-block;
+	padding: 10px;
+	float: left;
+}
+
+.notification .title {
+	font-size: 11pt;
+}
+
+.notification .body {
+	font-size: 10pt;
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+.notification .close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 10pt;
+	cursor: default;
+}
+
+.notification .close:hover {
+	border-radius: 50%;
+	color: white;
+	background-color: gray;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Browser Notification Demo</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="notification.css"/>
+		<script src="notification.js"></script>
+	</head>
+	<body style="font-family: sans-serif; padding: 20px">
+		<h3>Create notification</h3>
+		Title:
+		<input type="text" id="title" value="Test notification"/>
+		Body:
+		<input type="text" id="body" value="Hello world, I am a notification!"/>
+		<input type="button" onclick="showNotification();" value="Click for notification"/>
+		<h4>Event Log:</h4>
+		<div id="log"></div>
+		<script>
+		
+			function showNotification() {
+				var log = document.getElementById('log');
+				var title = document.getElementById('title');
+				var body = document.getElementById('body');
+				
+				var notification = notifications.createNotification('', title.value, body.value);
+				
+				notification.onshow = function () {
+					log.innerHTML = log.innerHTML + '<br>Notification <b>shown</b>';
+				};
+				notification.onclose = function () {
+					log.innerHTML = log.innerHTML + '<br>Notification <b>closed</b>';
+				};
+				notification.onclick = function () {
+					log.innerHTML = log.innerHTML + '<br>Notification <b>clicked</b>';
+				}
+				notification.show();
+			};
+			
+		</script>
+	</body>
+</html>
