@@ -6,6 +6,10 @@ Include the notification.js script and the notification.css stylesheet in your p
 
 `var notification = notifications.createNotification(iconUrl, title, body);`
 
+Then display a notification:
+
+`notification.show();`
+
 The following event handlers are supported:
 
 * `onclick` - Triggered when a notification is clicked
