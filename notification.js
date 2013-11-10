@@ -126,6 +126,7 @@ Notification.prototype.show = function () {
 Notification.prototype.cancel = function () {
 	//this.close();
 	// destroy
+	document.body.removeChild(this.el);
 	this.el = null;
 };
 
